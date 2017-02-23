@@ -10,7 +10,8 @@ The pipeline consists of following steps:
 - hough transformation
 - filtering, averaging and drawing of the lines to the original image
 
-The drawing function draws one line for the left side and one for the right side. To achieve this, the lines found by the hough transformation are devided into a left list and a right list. To devide into left and right the start/lower point of each line is considered but also it's slope. Only lines with a slope in a defined range are added to the corresponding list (for example horizontal lines will be ignored since the lane lines never become horizontal).
+The drawing function draws one line for the left side and one for the right side. To achieve this, the lines found by the hough transformation are devided into a left list and a right list.
+To devide into left and right the start/lower point of each line is considered but also it's slope. Only lines with a slope in a defined range are added to the corresponding list (for example horizontal lines will be ignored since the lane lines never become horizontal).
 After this, for the lines in the left and right list slope, center and their average is computed. From this, two averaged lines for the left and right side can be computed. If the variable "draw_all" is set to "True", all the lines from the hough transformation will be drawn to the picture besides the averaged lines.
 
 
